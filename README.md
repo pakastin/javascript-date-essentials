@@ -55,11 +55,23 @@ const tick = () => {
   const nextTick = 1000 - (now % 1000); // How many milliseconds until next round second
   setTimeout(tick, nextTick);
 
-  console.log('tick');
+  console.log('tick', Date.now());
 };
 
 tick(); // start clock;
+
+// tick
+// tick
+// tick
+// ...
+```
+Watch your computer's clock and see how precise our clock is. Compare it to the usual one:
+```js
+setInterval(() => {
+  console.log('tick', Date.now());
+}, 1000);
 ```
 
+See the difference there?
 
-work in progress...
+## work in progress...

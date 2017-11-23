@@ -41,7 +41,7 @@ zeroDate.getTime() // 0
 We get this in local time, so it's not necessarily by midnight, but in UTC it would be 00:00:00.
 
 ### Let's build a clock
-Not a graphical clock, but a CLI clock.
+Well, not a graphical clock, but a CLI clock.
 
 How can we count time to the next full second? Modulo is quite useful here:
 

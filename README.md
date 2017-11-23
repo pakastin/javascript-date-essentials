@@ -21,7 +21,7 @@ new Date('Fri Nov 24 2017 02:00:00 GMT+0200 (EET)'); // Fri Nov 24 2017 02:00:00
 ### Getting UNIX time
 UNIX time means milliseconds since 1.1.1970 00:00:00 UTC
 
-You can get UNIX time now by using `Date.now()` or by using `date.getTime()`.
+You can get UNIX time now by using `Date.now()` or `date.getTime()`.
 
 ```js
 Date.now(); // 1511479652772

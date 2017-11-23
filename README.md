@@ -2,11 +2,17 @@
 Learn how to use JavaScript's Date effenciently
 
 ## Date object
-Let's create a new Date:
+To create a Date, just call `new Date()`:
 ```js
 const date = new Date();
 
 date // Fri Nov 24 2017 01:22:35 GMT+0200 (EET)
+```
+
+You can provide many different formats, for example:
+```js
+new Date('2017-11-24'); // Fri Nov 24 2017 02:00:00 GMT+0200 (EET)
+new Date(1511481600000); // Fri Nov 24 2017 02:00:00 GMT+0200 (EET)
 ```
 
 ## Getting UNIX time

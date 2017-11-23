@@ -74,4 +74,15 @@ setInterval(() => {
 
 See the difference there?
 
+### Schedule
+What if we'd like to schedule some action to precisely the next minute. Let's see:
+
+```js
+const MINUTE = 60 * 1000;
+const now = Date.now();
+const nextMinute = MINUTE - (now % MINUTE);
+
+setTimeout(() => console.log('MINUTE'), nextMinute);
+```
+
 ## work in progress...

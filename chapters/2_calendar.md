@@ -82,8 +82,8 @@ Here we will use similar technique, than with end of month:
 ```js
 const weekdayOfEnd = endOfMonth.getDay();
 
-// find out saturday before last day of month and add 7 days:
-const lastSaturday = walkDates(endOfMonth, -weekdayOfEnd + 7);
+// find out sunday before last day of month and add 6 days:
+const lastSaturday = walkDates(endOfMonth, -weekdayOfEnd + 6);
 
 lastSaturday // Sat Dec 02 2017 23:59:59 GMT+0200 (EET)
 ```

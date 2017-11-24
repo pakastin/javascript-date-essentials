@@ -20,11 +20,11 @@ today // Fri Nov 24 2017 00:00:00 GMT+0200 (EET)
 Ok, let's then find out the first date of the month:
 
 ```js
-const beginningOfTheMonth = new Date(today);
+const beginningOfMonth = new Date(today);
 
-beginningOfTheMonth.setDate(1);
+beginningOfMonth.setDate(1);
 
-beginningOfTheMonth // Wed Nov 01 2017 00:00:00 GMT+0200 (EET)
+beginningOfMonth // Wed Nov 01 2017 00:00:00 GMT+0200 (EET)
 ```
 
 Nice!
@@ -34,15 +34,16 @@ Nice!
 Then we'll move forward to the end of the month:
 
 ```js
-const endOfTheMonth = new Date(beginningOfTheMonth);
+const endOfMonth = new Date(beginningOfMonth);
 
 // add one month and substract one millisecond:
-endOfTheMonth.setMonth(endOfTheMonth.getMonth() + 1);
-endOfTheMonth.setMilliseconds(-1);
+endOfMonth.setMonth(endOfMonth.getMonth() + 1);
+endOfMonth.setMilliseconds(-1);
 
-endOfTheMonth // Thu Nov 30 2017 23:59:59 GMT+0200 (EET)
+endOfMonth // Thu Nov 30 2017 23:59:59 GMT+0200 (EET)
 ```
 
 Wow, that's clever! 😀
+
 
 ## work in progress...

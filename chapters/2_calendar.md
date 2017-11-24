@@ -53,6 +53,24 @@ const weekdayOfBeginning = beginningOfMonth.getDay();
 const firstSunday = new Date(beginningOfMonth);
 
 firstSunday.setDate(firstSunday.getDate() - weekdayOfBeginning);
+
+firstSunday // Sun Oct 29 2017 00:00:00 GMT+0300 (EEST)
 ```
+
+## Last saturday
+Here we will use similar technique, than with end of month:
+
+```js
+const weekdayOfEnd = endOfMonth.getDay();
+const lastSaturday = new Date(endOfMonth);
+
+// find out saturday before last day of month and add 7 days:
+lastSaturday.setDate(firstSunday.getDate() - weekdayOfEnd);
+lastSaturday.setDate(lastSaturday.getDate() + 7);
+
+lastSaturday // Sat Dec 02 2017 23:59:59 GMT+0200 (EET)
+```
+
+Great success! 😎
 
 ## work in progress...

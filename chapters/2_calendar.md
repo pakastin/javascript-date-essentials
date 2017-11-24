@@ -27,9 +27,11 @@ beginningOfTheMonth.setDate(1);
 beginningOfTheMonth // Wed Nov 01 2017 00:00:00 GMT+0200 (EET)
 ```
 
+Nice!
+
 ## End of the month
 
-Nice! Let's move forward to the end of the month:
+Then we'll move forward to the end of the month:
 
 ```js
 const endOfTheMonth = new Date(beginningOfTheMonth);

@@ -1,4 +1,4 @@
-# Basics
+# 1. Seconds
 
 ## Date object
 To create a Date, just call `new Date()`:

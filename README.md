@@ -2,4 +2,5 @@
 Learn how to use JavaScript's Date effenciently
 
 ## Chapters
-[1. Seconds](chapters/1_seconds.md)
+[1. Clock](chapters/1_clock.md)
+[2. Calendar](chapters/2_calendar.md)

@@ -71,17 +71,8 @@ setInterval(() => {
 
 See the difference there?
 
-## Scheduling
-What if we'd like to schedule some action to precisely the next hour. Let's see:
+The cool thing about the nextTick trick is, that when your computer's clock synchronizes itself, the function can synchronize as well. Also you never miss a second or hit a second twice, because it's right on time.
 
-```js
-const HOUR = 60 * 60 * 1000;
-const now = Date.now();
-const nextHour = HOUR - (now % HOUR);
-
-setTimeout(() => {
-  console.log('Time is now ' + new Date());
-}, nextHour);
-```
+[Chapter 2. Calendar](2_calendar.md)
 
 ## work in progress...

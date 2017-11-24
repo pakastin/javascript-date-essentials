@@ -73,6 +73,8 @@ See the difference there?
 
 The cool thing about the nextTick trick is, that when your computer's clock synchronizes itself, the function can synchronize as well. Also you never miss a second or hit a second twice, because it's right on time.
 
+## Next chapter
+
 [Chapter 2. Calendar](2_calendar.md)
 
 ## work in progress...

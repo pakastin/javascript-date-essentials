@@ -1,4 +1,4 @@
-# 1. Seconds
+# 1. Clock
 
 ## Date object
 To create a Date, just call `new Date()`:

@@ -45,5 +45,14 @@ endOfMonth // Thu Nov 30 2017 23:59:59 GMT+0200 (EET)
 
 Wow, that's clever! 😀
 
+## First sunday / monday
+Calendar sheet usually start from sunday or monday. How can we figure out which is the first sunday? Easy!
+
+```js
+const weekdayOfBeginning = beginningOfMonth.getDay();
+const firstSunday = new Date(beginningOfMonth);
+
+firstSunday.setDate(firstSunday.getDate() - weekdayOfBeginning);
+```
 
 ## work in progress...

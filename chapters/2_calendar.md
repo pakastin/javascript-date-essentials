@@ -51,7 +51,7 @@ Before we go any further, we need a way to easily add / substract days:
 const walkDates = (date, days) => {
   const result = new Date(date);
 
-  date.setDate(date.getDate() +  days);
+  result.setDate(result.getDate() +  days);
 
   return result;
 }

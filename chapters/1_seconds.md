@@ -71,17 +71,17 @@ setInterval(() => {
 
 See the difference there?
 
-## Schedule
+## Scheduling
 What if we'd like to schedule some action to precisely the next hour. Let's see:
 
 ```js
-const HOUR = 60 * 1000;
+const HOUR = 60 * 60 * 1000;
 const now = Date.now();
 const nextHour = HOUR - (now % HOUR);
 
 setTimeout(() => {
   console.log('Time is now ' + new Date());
-}, nextMinute);
+}, nextHour);
 ```
 
 ## work in progress...

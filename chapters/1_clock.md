@@ -111,11 +111,13 @@ const tick = () => {
 
 tick(); // start clock;
 
-// 00:32:34
-// 00:32:35
-// 00:32:36
+// 00:32:34:001
+// 00:32:35:001
+// 00:32:36:002
 // ...
 ```
+
+Our clock is ~1ms precise, not bad.
 
 ## Next chapter
 

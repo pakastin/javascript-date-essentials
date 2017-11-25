@@ -1,5 +1,5 @@
 # JavaScript Date Essentials
-Learn how to use JavaScript's Date effenciently
+Learn how to use JavaScript's Date efficiently
 
 ## Chapters
 

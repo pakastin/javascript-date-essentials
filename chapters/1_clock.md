@@ -119,6 +119,35 @@ tick(); // start clock;
 
 Our clock is ~1ms precise, not bad.
 
+Let's again compare to the usual approach:
+
+```js
+const tick = () => {
+  const date = new Date();
+  setTimeout(tick, 1000);
+
+  const hours = ensureDigits(date.getHours(), 2);
+  const minutes = ensureDigits(date.getMinutes(), 2);
+  const seconds = ensureDigits(date.getSeconds(), 2);
+  const milliseconds = ensureDigits(date.getMilliseconds(), 3);
+
+  console.log(`${hours}:${minutes}:${seconds}:${milliseconds}`);
+};
+
+tick(); // start clock;
+
+// 01:31:44:525
+// 01:31:45:530
+// 01:31:46:532
+// ...
+// 01:34:24:995
+// 01:34:25:999
+// 01:34:27:001
+// ...
+```
+
+Oh no, it's not as near as precise, and it missed a second there (01:34:23).
+
 ## Next chapter
 
 [Chapter 2. Calendar](2_calendar.md)

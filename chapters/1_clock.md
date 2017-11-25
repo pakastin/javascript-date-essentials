@@ -57,9 +57,9 @@ const tick = () => {
 
 tick(); // start clock;
 
-// tick
-// tick
-// tick
+// tick 1511652140001
+// tick 1511652141001
+// tick 1511652142002
 // ...
 ```
 Watch your computer's clock and see how precise our "ticker" is. Compare it to the usual one:
@@ -67,6 +67,12 @@ Watch your computer's clock and see how precise our "ticker" is. Compare it to t
 setInterval(() => {
   console.log('tick', Date.now());
 }, 1000);
+
+// tick 1511652183704
+// tick 1511652184705
+// tick 1511652185709
+// ...
+
 ```
 
 See the difference there?

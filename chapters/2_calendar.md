@@ -90,4 +90,23 @@ lastSaturday // Sat Dec 02 2017 23:59:59 GMT+0200 (EET)
 
 Great success! 😎
 
+## Build calendar sheet
+Ok, now we can build the calendar sheet. Let's start from first sunday and iterate through last saturday:
+
+```js
+const sheet = [];
+let iterate = new Date(firstSunday);
+
+while (iterate < lastSaturday) {
+  const week = new Array(7);
+  for (let i = 0; i < 7; i++) {
+    week[i] = iterate;
+    iterate = walkDates(iterate, 1);
+  }
+  sheet.push(week);
+}
+```
+
+Nice!
+
 ## work in progress...

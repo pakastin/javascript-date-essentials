@@ -81,10 +81,14 @@ The cool thing about the nextTick trick is, that when your computer's clock sync
 
 ## Let's add hours, minutes and seconds
 
-First we need a helper to add leading zeros when there's only a single digit number:
+First we need a helper to ensure leading zeros when there's not enough digits:
 ```js
-const ensureTwoDigits = (num) => {
-  return ('0' + num).slice(-2); // add leading zero and take two last characters
+const ensureDigits = (num, count) => {
+  if (count === 2) {
+    return ('0' + num).slice(-2); // add leading zero and take two last characters
+  } else if (count === 3) {
+    return ('00' + num).slice(-3);
+  }
 };
 ```
 
@@ -97,11 +101,12 @@ const tick = () => {
   const nextTick = 1000 - (now % 1000); // How many milliseconds until next round second
   setTimeout(tick, nextTick);
 
-  const hours = ensureTwoDigits(date.getHours());
-  const minutes = ensureTwoDigits(date.getMinutes());
-  const seconds = ensureTwoDigits(date.getSeconds());
+  const hours = ensureDigits(date.getHours(), 2);
+  const minutes = ensureDigits(date.getMinutes(), 2);
+  const seconds = ensureDigits(date.getSeconds(), 2);
+  const milliseconds = ensureDigits(date.getMilliseconds(), 3);
 
-  console.log(`${hours}:${minutes}:${seconds}`);
+  console.log(`${hours}:${minutes}:${seconds}:${milliseconds}`);
 };
 
 tick(); // start clock;

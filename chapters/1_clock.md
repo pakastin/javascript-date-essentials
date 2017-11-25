@@ -117,7 +117,9 @@ tick(); // start clock;
 // ...
 ```
 
-Our clock is ~1ms precise, not bad.
+Our clock is ~1ms precise, not bad!
+
+## Compare time
 
 Let's again compare to the usual approach:
 
